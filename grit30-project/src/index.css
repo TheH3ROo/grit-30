@@ -11,6 +11,46 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg: #ffffff;
+  --fg: #111827;
+  --card: #f3f4f6;
+}
+
+.dark {
+  --bg: #0b1220;
+  --fg: #e5e7eb;
+  --card: #111827;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+main.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--card);
+  border-radius: 12px;
 }
 
 a {
@@ -28,6 +68,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
 h1 {
@@ -37,17 +81,20 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border: 1px solid #9ca3af;
+  padding: 0.5rem 0.75rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  background: transparent;
   background-color: #1a1a1a;
   cursor: pointer;
+  color: inherit;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
+  opacity: 0.9;
 }
 button:focus,
 button:focus-visible {

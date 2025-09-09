@@ -1,13 +1,19 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Counter } from '@/components/Counter'
+import { ThemeToggle } from '@/components/ThemeToggle'
+
+const TITLE = import.meta.env.VITE_APP_TITLE as string
+const API_BASE = import.meta.env.VITE_API_BASE as string
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <main className="container">
+      <header>
+        <h1>{TITLE}</h1>
+        <ThemeToggle />
+      </header>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -17,18 +23,15 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <section>
+        <p>Vite + React + TS with HMR ✅</p>
+        <p>API base from env: <code>{API_BASE}</code></p>
+        <Counter />
+      </section>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </main>
   )
 }
 
