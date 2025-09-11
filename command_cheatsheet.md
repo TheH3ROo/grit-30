@@ -13,7 +13,7 @@ package.json
   "serve": "vite preview"
 },
 
-Now you can start the development server with bun run dev
+Now you can start the development server with bun run dev.
 
 The following command will build your app for production.
 
